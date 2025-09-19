@@ -19,7 +19,6 @@ export default function LoginForm() {
     e.preventDefault();
     setLoading(true);
 
-    // 🔹 For now: Just fake loading (no backend call)
     setTimeout(() => {
       setLoading(false);
       alert("Frontend-only: Form submitted!");
@@ -31,11 +30,11 @@ export default function LoginForm() {
       component="form"
       onSubmit={handleSubmit}
       style={{
-        background: "rgba(255,255,255,0.25)",
-        backdropFilter: "blur(10px)",
-        borderRadius: "12px",
+        background: "rgba(255,255,255,0.3)",
+        backdropFilter: "blur(12px)",
+        borderRadius: "16px",
         padding: "2rem",
-        boxShadow: "0 8px 24px rgba(0,0,0,0.2)",
+        boxShadow: "0 8px 24px rgba(0,0,0,0.25)",
         width: "100%",
         maxWidth: "360px",
       }}
@@ -57,21 +56,6 @@ export default function LoginForm() {
           fullWidth
           required
           placeholder="Enter your password"
-          append={
-            <button
-              type="button"
-              onClick={() => setShowPassword(!showPassword)}
-              style={{
-                background: "none",
-                border: "none",
-                cursor: "pointer",
-                display: "flex",
-                alignItems: "center",
-              }}
-            >
-              {showPassword ? <EyeOff size={16} /> : <Eye size={16} />}
-            </button>
-          }
         />
       </EuiFormRow>
 
@@ -94,9 +78,11 @@ export default function LoginForm() {
           href="#"
           style={{
             fontSize: "0.875rem",
-            color: "#555",
+            color: "#444",
             textDecoration: "none",
           }}
+          onMouseOver={(e) => (e.currentTarget.style.color = "#0056b3")}
+          onMouseOut={(e) => (e.currentTarget.style.color = "#444")}
         >
           Forgot password?
         </a>
