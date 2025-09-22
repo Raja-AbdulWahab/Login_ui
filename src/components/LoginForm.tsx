@@ -1,92 +1,76 @@
+// src/components/LoginForm.tsx
 "use client";
-
-import { useState } from "react";
-import { Eye, EyeOff } from "lucide-react";
+import React, { useState } from "react";
 import {
+  EuiForm,
+  EuiFormRow,
   EuiFieldText,
   EuiFieldPassword,
   EuiButton,
-  EuiForm,
-  EuiFormRow,
-  EuiSpacer,
 } from "@elastic/eui";
 
 export default function LoginForm() {
-  const [loading, setLoading] = useState(false);
-  const [showPassword, setShowPassword] = useState(false);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setLoading(true);
-
-    setTimeout(() => {
-      setLoading(false);
-      alert("Frontend-only: Form submitted!");
-    }, 1500);
+    console.log("Login with:", { email, password });
   };
 
   return (
-    <EuiForm
-      component="form"
-      onSubmit={handleSubmit}
+    <div
       style={{
-        background: "rgba(255,255,255,0.3)",
-        backdropFilter: "blur(12px)",
-        borderRadius: "16px",
+        background: "rgba(255,255,255,0.9)", // soft white background
         padding: "2rem",
-        boxShadow: "0 8px 24px rgba(0,0,0,0.25)",
-        width: "100%",
-        maxWidth: "360px",
+        borderRadius: "12px",
+        boxShadow: "0 4px 20px rgba(0,0,0,0.15)",
+        minWidth: "320px",
       }}
     >
-      <EuiFormRow label="Email" fullWidth>
-        <EuiFieldText
-          icon="email"
-          placeholder="Enter your email"
-          fullWidth
-          required
-        />
-      </EuiFormRow>
+      <EuiForm component="form" onSubmit={handleSubmit}>
+        <h2 style={{ marginBottom: "1rem", textAlign: "center" }}>Login</h2>
 
-      <EuiSpacer size="m" />
+        <EuiFormRow label="Email">
+          <EuiFieldText
+            placeholder="abc@mail.com"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            fullWidth
+            style={{
+              border: "1px solid #ccc", // default grey
+              borderRadius: "6px",
+            }}
+          />
+        </EuiFormRow>
 
-      <EuiFormRow label="Password" fullWidth>
-        <EuiFieldPassword
-          type={showPassword ? "text" : "password"}
-          fullWidth
-          required
-          placeholder="Enter your password"
-        />
-      </EuiFormRow>
+        <EuiFormRow label="Password">
+          <EuiFieldPassword
+            placeholder="............"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            fullWidth
+            style={{
+              border: "1px solid #ccc", // default grey
+              borderRadius: "6px",
+              fontSize: "18px",
+            }}
+          />
+        </EuiFormRow>
 
-      <EuiSpacer size="m" />
-
-      <EuiButton
-        type="submit"
-        isLoading={loading}
-        fill
-        fullWidth
-        style={{ height: "40px" }}
-      >
-        {loading ? "Loading..." : "Login"}
-      </EuiButton>
-
-      <EuiSpacer size="s" />
-
-      <div style={{ textAlign: "right" }}>
-        <a
-          href="#"
+        <EuiButton
+          type="submit"
+          fill
           style={{
-            fontSize: "0.875rem",
-            color: "#444",
-            textDecoration: "none",
+            backgroundColor: "#11193c", // MidnightBlue variant
+            border: "none",
+            borderRadius: "6px",
           }}
-          onMouseOver={(e) => (e.currentTarget.style.color = "#0056b3")}
-          onMouseOut={(e) => (e.currentTarget.style.color = "#444")}
+          fullWidth
         >
-          Forgot password?
-        </a>
-      </div>
-    </EuiForm>
+          Login
+        </EuiButton>
+      </EuiForm>
+    </div>
   );
 }

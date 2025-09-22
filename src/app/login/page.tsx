@@ -20,7 +20,7 @@ export default function LoginPage() {
   style={{
     position: "absolute",
     inset: 0,
-    background: "linear-gradient(to top, rgba(0, 64, 128, 0.6) 20%, transparent 60%)",
+    background: "linear-gradient(to top, rgb(25, 25, 112, 0.6) 20%, transparent 60%)",
   }}
 />
 
