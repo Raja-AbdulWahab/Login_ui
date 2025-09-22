@@ -29,7 +29,14 @@ export default function LoginForm() {
       }}
     >
       <EuiForm component="form" onSubmit={handleSubmit}>
-        <h2 style={{ marginBottom: "1rem", textAlign: "center" }}>Login</h2>
+        <h2 style={{
+
+          fontSize: "1.8rem",   // bigger text
+          fontWeight: "700",    // bold
+          marginBottom: "1rem", // spacing
+          textAlign: "center",  // center align
+          color: "#11193C",     // matches your theme color
+        }}>Login</h2>
 
         <EuiFormRow label="Email">
           <EuiFieldText
@@ -62,7 +69,7 @@ export default function LoginForm() {
           type="submit"
           fill
           style={{
-            backgroundColor: "#11193c", // MidnightBlue variant
+            backgroundColor: "#0000FF", // MidnightBlue variant
             border: "none",
             borderRadius: "6px",
           }}

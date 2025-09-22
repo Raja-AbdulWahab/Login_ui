@@ -16,31 +16,31 @@ export default function LoginPage() {
       }}
     >
       {/* 🔹 Blue gradient only at bottom */}
-<div
-  style={{
-    position: "absolute",
-    inset: 0,
-    background: "linear-gradient(to top, rgb(25, 25, 112, 0.6) 20%, transparent 60%)",
-  }}
-/>
+      <div
+        style={{
+          position: "absolute",
+          inset: 0,
+          background: "linear-gradient(to top, rgba(0, 64, 128, 0.6) 20%, transparent 60%)",
+        }}
+      />
 
 
       {/* 🔹 Right transparent panel */}
-      <div
-        style={{
-          marginLeft: "auto",
-          width: "100%",
-          maxWidth: "42%",
-          height: "100%",
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          background: "rgba(255, 255, 255, 0.25)",
-          backdropFilter: "blur(14px)",
-          padding: "2rem",
-          boxShadow: "0 4px 20px rgba(0,0,0,0.25)",
-        }}
-      >
+<div
+  style={{
+    marginLeft: "auto",
+    width: "100%",
+    maxWidth: "42%",
+    height: "100%",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    background: "rgba(255, 255, 255, 0.65)", // translucent white
+    padding: "2rem",
+    boxShadow: "0 4px 20px rgba(0,0,0,0.15)",
+  }}
+>
+
         {/* 🔹 Logo at top */}
         <div style={{ marginTop: "2rem", marginBottom: "2rem" }}>
           <Logo />
@@ -51,6 +51,6 @@ export default function LoginPage() {
           <LoginForm />
         </div>
       </div>
-    </div>
+    </div >
   );
 }
