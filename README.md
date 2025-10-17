@@ -1,36 +1,89 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+🔐 Login UI
 
-## Getting Started
+A sleek, responsive, and modern Login Interface built with Typescript and Next.js.
+Designed for scalability and easy integration into any authentication system — whether you’re using Firebase, Node.js, or custom APIs.
 
-First, run the development server:
 
-```bash
+🖼️ Screenshots
+
+<img width="1223" height="613" alt="login" src="https://github.com/user-attachments/assets/48935ec0-0405-44e0-be13-39c7d749b1b3" />
+
+Login Page	Sign Up / Forgot Password
+
+	
+
+💡 Tip:
+
+Save your screenshots inside public/images
+
+Rename or adjust the paths above according to your structure.
+
+⚙️ Features
+
+✅ Clean and minimal UI design
+✅ Responsive across all screen sizes (Desktop, Tablet, Mobile)
+✅ Animated form transitions and hover effects
+✅ Input validation (email, password fields, etc.)
+✅ Password visibility toggle
+✅ Reusable component structure for easy expansion
+✅ Ready for backend integration (JWT, Firebase, etc.)
+
+🧩 Tech Stack
+Technology	Purpose
+Next.js / React	UI framework and routing
+Tailwind CSS / CSS Modules	Styling and responsiveness
+Framer Motion	Animations and smooth transitions
+TypeScript (optional)	Type safety and clean structure
+🧱 Project Structure
+src/
+│
+├── app/
+│   ├── login/
+│   │   └── page.tsx
+│   ├── register/
+│   │   └── page.tsx
+│   └── globals.css
+│
+├── components/
+│   ├── AuthCard.tsx
+│   ├── InputField.tsx
+│   ├── Button.tsx
+│   └── Logo.tsx
+│
+└── public/
+    └── images/
+        ├── login.png
+        └── signup.png
+
+🧰 Setup Instructions
+1️⃣ Clone the Repository
+git clone https://github.com/your-username/login-ui.git
+cd login-ui
+
+2️⃣ Install Dependencies
+npm install
+# or
+yarn install
+
+3️⃣ Run Development Server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+# visit http://localhost:3000
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4️⃣ Build for Production
+npm run build
+npm start
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+📱 Responsive Behavior
+Screen Size	Layout Behavior
+💻 Desktop (≥1024px)	Centered two-column layout with branding + form
+📊 Tablet (≤1024px)	Adjusts to single-column form view
+📱 Mobile (≤768px)	Full-width single-column login form for clean usability
+🧠 Future Enhancements
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+🔒 Integration with backend authentication (Node.js / Firebase / NextAuth)
 
-## Learn More
+👨‍💻 Author
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Abdul Wahab
+💼 Full Stack / MERN Developer
+🌐 Portfolio Website: (https://raja-abdulwahab.github.io/My_Portfolio/)
